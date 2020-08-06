@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     @IBAction func keyPressed(_ sender: UIButton) {
         guard let title = sender.currentTitle else {return}
         playSound(title)
+        
+        // dim button
+        sender.alpha = 0.5
+        sender.fadeAlpha(to: 1.0, duration: 0.2)
     }
     
 
